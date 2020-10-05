@@ -59,7 +59,6 @@ services:
             - 8080:80
         depends_on: 
             - mongo
-    
     client:
         image: client
         restart: always
@@ -72,9 +71,9 @@ services:
             - 27017:27017
 
 Le dockercompose est structuré toujours de la même façon
---> définition du service
---> définition de l'image
---> définition du ports
+-définition du service
+-définition de l'image
+-définition du ports
 
 Mais dans ce cas si on peut également être plus précis en utilisant par exemple
 -restart
