@@ -79,6 +79,7 @@ Le dockercompose est structuré toujours de la même façon
 
 
 Mais dans ce cas si on peut également être plus précis en utilisant par exemple
+
 -restart
 
 -depend_on
