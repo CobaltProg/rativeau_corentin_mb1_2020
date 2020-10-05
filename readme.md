@@ -19,10 +19,15 @@ Backend
 server :
 
 FROM node:10       --> l'image basé sur Node 10
+
 WORKDIR /app       --> Modifie le répertoire courant
+
 COPY ./package.json ./  --> Copie les dépendances JSON
+
 RUN npm install    --> Installe les package du projet
+
 EXPOSE 8080             --> définie le port du service
+
 CMD ["npm","start"]     --> lance le service
 
 Frontend
@@ -30,10 +35,15 @@ Frontend
 client :
 
 FROM mhart/alpine-node:3.12.0 --> l'image basé sur alpine avec Node
+
 WORKDIR /app                  --> Modifie le répertoire courant
+
 COPY ./package.json ./        --> Copie les dépendances JSON
+
 RUN npm install               -->Installe les package du projet
+
 EXPOSE 2368                   --> définie le port du service
+
 CMD ["npm","start"]           --> lance le service
 
 Le Docker compose
